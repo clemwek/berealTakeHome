@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  berealTakeHome
+
+  Created by Clement  Wekesa on 4/27/25.
+  
+*/
+
+"ContentView.WelcomeMessage" = "Bonjour le monde!, %@!";
