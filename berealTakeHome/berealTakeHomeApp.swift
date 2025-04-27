@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct berealTakeHomeApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+struct BerealTakeHomeApp: App {
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }
