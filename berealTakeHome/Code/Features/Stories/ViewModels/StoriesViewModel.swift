@@ -27,7 +27,9 @@ class StoriesViewModel: ObservableObject {
     }
   }
 
-  func likeStory(_ story: StoryModel) {
+  func likeStory(_ story: StoryModel?) {
+    guard let story = story else { return }
+
     StoriesAction(
       path: "stories/\(story.id)/like",
       method: .put

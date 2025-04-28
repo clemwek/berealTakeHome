@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddUserStories: View {
+  let viewModel: StoriesViewModel
   var userStory = StoryModel(id: 1000,
                              image: "user",
                              user: "StoryScreen.addUserStory".localized,
@@ -20,7 +21,10 @@ struct AddUserStories: View {
 
   var body: some View {
     HStack {
-      UserStory(story: userStory)
+      UserStory(
+        story: userStory,
+        viewModel: viewModel
+      )
         .overlay {
           VStack {
 
@@ -46,5 +50,5 @@ struct AddUserStories: View {
 }
 
 #Preview {
-    AddUserStories()
+  AddUserStories(viewModel: StoriesViewModel())
 }

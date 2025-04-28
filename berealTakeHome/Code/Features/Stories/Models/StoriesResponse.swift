@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct StoriesResponse: Decodable {
-  let stories: [StoryModel]
+struct StoriesResponse: Codable {
+  var stories: [StoryModel]
 }

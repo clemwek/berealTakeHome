@@ -14,10 +14,13 @@ struct StoryStrip: View {
   var body: some View {
     ScrollView(.horizontal) {
       HStack {
-        AddUserStories()
+        AddUserStories(viewModel: viewModel)
         HStack {
           ForEach(viewModel.stories) { story in
-            UserStory(story: story)
+            UserStory(
+              story: story,
+              viewModel: viewModel
+            )
               .padding(.trailing, 10)
           }
         }
@@ -33,8 +36,8 @@ struct StoryStrip: View {
                     liked: false)
   let viewModel = StoriesViewModel()
   viewModel.stories = [
-       .init(id: 1, image: "avatar1", user: "u1", story: story, createdAt: "", updatedAt: ""),
-       .init(id: 2, image: "avatar2", user: "u2", story: story, createdAt: "", updatedAt: "")
+       .init(id: 1, image: "ava1", user: "u1", story: story, createdAt: "", updatedAt: ""),
+       .init(id: 2, image: "ava6", user: "u2", story: story, createdAt: "", updatedAt: "")
      ]
 
   return StoryStrip(viewModel: viewModel)

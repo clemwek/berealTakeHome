@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct StoryDetailScreen: View {
+
+  @ObservedObject var viewModel: StoriesViewModel = StoriesViewModel()
   var story: StoryModel?
   @State private var isLiked: Bool
 
@@ -22,6 +24,9 @@ struct StoryDetailScreen: View {
         .edgesIgnoringSafeArea(.top)
         .onTapGesture(count: 2) {
           isLiked.toggle()
+          var newStory = story
+          newStory?.story.liked = self.isLiked
+          viewModel.likeStory(newStory)
         }
       HStack {
         Image(systemName: isLiked ? "heart" : "heart.fill")

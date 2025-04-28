@@ -11,6 +11,6 @@ struct Story: Identifiable, Codable {
 
   let id: Int
   let story: String
-  let seen: Bool
-  let liked: Bool
+  var seen: Bool
+  var liked: Bool
 }
