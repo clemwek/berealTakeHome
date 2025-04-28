@@ -10,13 +10,8 @@ import SwiftUI
 struct ContentView: View {
 
   var body: some View {
-    VStack {
-      Image(systemName: "globe")
-        .imageScale(.large)
-        .foregroundStyle(.tint)
-      Text("ContentView.WelcomeMessage".localized(arguments: "Clem"))
-    }
-    .padding()
+    // Here is were we check is we are logged in to eith redirect to homescreen or login
+    RootScreen()
   }
 }
 
