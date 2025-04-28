@@ -34,7 +34,7 @@ struct StoriesAction {
           {
             "id": 1,
             "image": "avatar1",
-            "story": {"id": 1, "story": "", "status": true},
+            "story": {"id": 1, "story": "r1", "status": true},
             "user": "user1",
             "createdAt": "2025-04-01T10:00:00Z",
             "updatedAt": "2025-04-01T12:00:00Z"
@@ -42,7 +42,7 @@ struct StoriesAction {
           {
             "id": 2,
             "image": "avatar2",
-            "story": {"id": 1, "story": "", "status": true},
+            "story": {"id": 1, "story": "r2", "status": true},
             "user": "user2",
             "createdAt": "2025-04-02T11:30:00Z",
             "updatedAt": "2025-04-02T14:00:00Z"
@@ -50,7 +50,7 @@ struct StoriesAction {
           {
             "id": 3,
             "image": "avatar3",
-            "story": {"id": 1, "story": "", "status": true},
+            "story": {"id": 1, "story": "r3", "status": true},
             "user": "user3",
             "createdAt": "2025-04-03T09:00:00Z",
             "updatedAt": "2025-04-03T10:00:00Z"
@@ -58,7 +58,7 @@ struct StoriesAction {
           {
             "id": 4,
             "image": "avatar4",
-            "story": {"id": 1, "story": "", "status": true},
+            "story": {"id": 1, "story": "r4", "status": true},
             "user": "user4",
             "createdAt": "2025-04-04T08:45:00Z",
             "updatedAt": "2025-04-04T09:15:00Z"
@@ -81,16 +81,6 @@ struct StoriesAction {
       queryItems: queryItems,
       mockData: loadMockJson()
     ) { data in
-//      do {
-//          let response = try JSONDecoder().decode(StoriesResponse.self, from: data)
-//          completion(response)
-//        } catch {
-//          print("🛑 Decoding failed: \(error)")
-//          if let json = String(data: data, encoding: .utf8) {
-//            print("💾 Raw JSON:\n\(json)")
-//          }
-//          failure(.jsonDecoding)
-//        }
 
       if let response = try? JSONDecoder().decode(
         StoriesResponse.self,

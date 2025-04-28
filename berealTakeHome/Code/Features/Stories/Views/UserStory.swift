@@ -16,13 +16,14 @@ struct UserStory: View {
 
         Image(story?.image ?? "person.circle")
           .resizable()
-          .frame(width: 100, height: 100)
+          .frame(width: 60, height: 60)
           .padding(25)
           .clipShape(.circle)
           .overlay(Circle().stroke(
             story?.story.status ?? false ? Color.green : Color.white,
             lineWidth: 5))
           .shadow(radius: 10)
+          .toolbar(.hidden, for: .tabBar)
       }
 
       Text(story?.user ?? "StoryScreen.addUserStory".localized)
