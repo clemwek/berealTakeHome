@@ -13,7 +13,8 @@ struct AddUserStories: View {
                              user: "StoryScreen.addUserStory".localized,
                              story: Story(id: 1,
                                           story: "r5",
-                                          status: true),
+                                          seen: true,
+                                          liked: false),
                              createdAt: "2025-04-01T10:00:00Z",
                              updatedAt: "2025-04-01T10:00:00Z")
 

@@ -34,7 +34,7 @@ struct StoriesAction {
           {
             "id": 1,
             "image": "avatar1",
-            "story": {"id": 1, "story": "r1", "status": true},
+            "story": {"id": 1, "story": "r1", "seen": true, "liked": false},
             "user": "user1",
             "createdAt": "2025-04-01T10:00:00Z",
             "updatedAt": "2025-04-01T12:00:00Z"
@@ -42,7 +42,7 @@ struct StoriesAction {
           {
             "id": 2,
             "image": "avatar2",
-            "story": {"id": 1, "story": "r2", "status": true},
+            "story": {"id": 1, "story": "r2", "seen": false, "liked": true},
             "user": "user2",
             "createdAt": "2025-04-02T11:30:00Z",
             "updatedAt": "2025-04-02T14:00:00Z"
@@ -50,7 +50,7 @@ struct StoriesAction {
           {
             "id": 3,
             "image": "avatar3",
-            "story": {"id": 1, "story": "r3", "status": true},
+            "story": {"id": 1, "story": "r3", "seen": false, "liked": true},
             "user": "user3",
             "createdAt": "2025-04-03T09:00:00Z",
             "updatedAt": "2025-04-03T10:00:00Z"
@@ -58,7 +58,7 @@ struct StoriesAction {
           {
             "id": 4,
             "image": "avatar4",
-            "story": {"id": 1, "story": "r4", "status": true},
+            "story": {"id": 1, "story": "r4", "seen": true, "liked": false},
             "user": "user4",
             "createdAt": "2025-04-04T08:45:00Z",
             "updatedAt": "2025-04-04T09:15:00Z"

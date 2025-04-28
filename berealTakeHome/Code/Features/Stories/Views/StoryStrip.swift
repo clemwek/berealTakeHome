@@ -28,8 +28,9 @@ struct StoryStrip: View {
 
 #Preview {
   let story = Story(id: 1,
-                        story: "the story",
-                        status: true)
+                    story: "the story",
+                    seen: true,
+                    liked: false)
   let viewModel = StoriesViewModel()
   viewModel.stories = [
        .init(id: 1, image: "avatar1", user: "u1", story: story, createdAt: "", updatedAt: ""),

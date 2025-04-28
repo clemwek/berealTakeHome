@@ -20,7 +20,7 @@ struct UserStory: View {
           .padding(25)
           .clipShape(.circle)
           .overlay(Circle().stroke(
-            story?.story.status ?? false ? Color.green : Color.white,
+            story?.story.seen ?? false ? Color.green : Color.white,
             lineWidth: 5))
           .shadow(radius: 10)
           .toolbar(.hidden, for: .tabBar)
@@ -34,8 +34,10 @@ struct UserStory: View {
 
 #Preview {
   let story = Story(id: 1,
-                        story: "the story",
-                        status: true)
+                    story: "the story",
+                    seen: true,
+                    liked: false)
+
   UserStory(
     story: .init(
             id: 1,
