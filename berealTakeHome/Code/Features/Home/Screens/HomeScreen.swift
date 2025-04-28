@@ -12,7 +12,7 @@ struct HomeScreen: View {
   var body: some View {
     NavigationView {
       VStack {
-        StoryScreen()
+        StoriesScreen()
         Spacer()
       }
       .navigationTitle("Bereal")

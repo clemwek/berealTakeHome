@@ -1,0 +1,41 @@
+{
+  "status": "success",
+  "page": 1,
+  "perPage": 20,
+  "data": {
+    "stories": [
+      {
+        "id": 1,
+        "image": "avatar1",
+        "story": "Just tried out this new café downtown—highly recommend the latte!",
+        "user": "user1",
+        "createdAt": "2025-04-01T10:00:00Z",
+        "updatedAt": "2025-04-01T12:00:00Z"
+      },
+      {
+        "id": 2,
+        "image": "avatar2",
+        "story": "Hiking trip was amazing. The view from the summit was breathtaking.",
+        "user": "user2",
+        "createdAt": "2025-04-02T11:30:00Z",
+        "updatedAt": "2025-04-02T14:00:00Z"
+      },
+      {
+        "id": 3,
+        "image": "avatar3",
+        "story": "Loving the new SwiftUI APIs in iOS 18—so much more ergonomic!",
+        "user": "user3",
+        "createdAt": "2025-04-03T09:00:00Z",
+        "updatedAt": "2025-04-03T10:00:00Z"
+      },
+      {
+        "id": 4,
+        "image": "avatar4",
+        "story": "Does anyone have book recommendations? Looking for sci-fi classics.",
+        "user": "user4",
+        "createdAt": "2025-04-04T08:45:00Z",
+        "updatedAt": "2025-04-04T09:15:00Z"
+      }
+    ]
+  }
+}

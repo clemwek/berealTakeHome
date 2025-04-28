@@ -9,13 +9,15 @@ import SwiftUI
 
 struct StoryStrip: View {
 
+  @ObservedObject var viewModel: StoriesViewModel
+
   var body: some View {
     ScrollView(.horizontal) {
       HStack {
         AddUserStories()
         HStack {
-          ForEach(0..<5) { _ in
-            UserStory()
+          ForEach(viewModel.stories) { story in
+            UserStory(story: story)
               .padding(.trailing, 10)
           }
         }
@@ -25,5 +27,10 @@ struct StoryStrip: View {
 }
 
 #Preview {
-  StoryStrip()
+  let viewModel = StoriesViewModel()
+  viewModel.stories = [
+       .init(id: 1, image: "avatar1", user: "u1", story: "", createdAt: "", updatedAt: ""),
+       .init(id: 2, image: "avatar2", user: "u2", story: "", createdAt: "", updatedAt: "")
+     ]
+  return StoryStrip(viewModel: viewModel)
 }

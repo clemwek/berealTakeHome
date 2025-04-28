@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct AddUserStories: View {
+  var userStory = StoryModel(id: 1000,
+                             image: "user",
+                             user: "currentUser",
+                             story: "",
+                             createdAt: "2025-04-01T10:00:00Z",
+                             updatedAt: "2025-04-01T10:00:00Z")
 
   var body: some View {
     HStack {
-      UserStory()
+      UserStory(story: userStory)
         .overlay {
           VStack {
 

@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EBF322E62DBF774600D6BD17 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = EBF322E52DBF774600D6BD17 /* SwiftKeychainWrapper */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		EBF3222E2DBE1BAB00D6BD17 /* berealTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = berealTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBF322E62DBF774600D6BD17 /* SwiftKeychainWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,7 @@
 			);
 			name = berealTakeHome;
 			packageProductDependencies = (
+				EBF322E52DBF774600D6BD17 /* SwiftKeychainWrapper */,
 			);
 			productName = berealTakeHome;
 			productReference = EBF3222E2DBE1BAB00D6BD17 /* berealTakeHome.app */;
@@ -98,6 +104,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				EBF3223C2DBEAA7B00D6BD17 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+				EBF322E42DBF774600D6BD17 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EBF3222F2DBE1BAB00D6BD17 /* Products */;
@@ -350,6 +357,14 @@
 				minimumVersion = 0.59.1;
 			};
 		};
+		EBF322E42DBF774600D6BD17 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -357,6 +372,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EBF3223C2DBEAA7B00D6BD17 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
 			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+		EBF322E52DBF774600D6BD17 /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBF322E42DBF774600D6BD17 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
