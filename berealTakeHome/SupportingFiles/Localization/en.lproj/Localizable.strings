@@ -7,3 +7,4 @@
 */
 
 "ContentView.WelcomeMessage" = "Hello, World!, %@!";
+"StoryScreen.addUserStory" = "Your story";
