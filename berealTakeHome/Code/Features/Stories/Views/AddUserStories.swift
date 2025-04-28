@@ -10,8 +10,10 @@ import SwiftUI
 struct AddUserStories: View {
   var userStory = StoryModel(id: 1000,
                              image: "user",
-                             user: "currentUser",
-                             story: "",
+                             user: "StoryScreen.addUserStory".localized,
+                             story: Story(id: 1,
+                                              story: "the story",
+                                              status: true),
                              createdAt: "2025-04-01T10:00:00Z",
                              updatedAt: "2025-04-01T10:00:00Z")
 

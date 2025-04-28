@@ -27,10 +27,14 @@ struct StoryStrip: View {
 }
 
 #Preview {
+  let story = Story(id: 1,
+                        story: "the story",
+                        status: true)
   let viewModel = StoriesViewModel()
   viewModel.stories = [
-       .init(id: 1, image: "avatar1", user: "u1", story: "", createdAt: "", updatedAt: ""),
-       .init(id: 2, image: "avatar2", user: "u2", story: "", createdAt: "", updatedAt: "")
+       .init(id: 1, image: "avatar1", user: "u1", story: story, createdAt: "", updatedAt: ""),
+       .init(id: 2, image: "avatar2", user: "u2", story: story, createdAt: "", updatedAt: "")
      ]
+
   return StoryStrip(viewModel: viewModel)
 }

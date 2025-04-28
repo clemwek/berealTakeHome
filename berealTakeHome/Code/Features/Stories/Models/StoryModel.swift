@@ -12,7 +12,7 @@ struct StoryModel: Identifiable, Codable {
   let id: Int
   let image: String
   let user: String
-  let story: String
+  let story: Story
   let createdAt: String
   let updatedAt: String
 }
