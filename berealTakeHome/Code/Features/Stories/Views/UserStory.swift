@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct UserStory: View {
+
   let story: StoryModel?
   let viewModel: StoriesViewModel
 
+  @State private var showStory: Bool = false
+
   var body: some View {
     VStack {
-      NavigationLink(destination: StoryDetailScreen(story: story)) {
+      NavigationLink(
+        destination: StoryDetailScreen(viewModel: viewModel, story: story),
+        isActive: $showStory) {
+          EmptyView()
+        }
+        .hidden()
 
+      VStack {
         Image(story?.image ?? "person.circle")
           .resizable()
           .aspectRatio(contentMode: .fit)
@@ -26,6 +35,13 @@ struct UserStory: View {
             lineWidth: 5))
           .shadow(radius: 2)
           .toolbar(.hidden, for: .tabBar)
+          .onTapGesture {
+            showStory = true
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+              showStory = false
+            }
+          }
       }
 
       Text(story?.user ?? "StoryScreen.addUserStory".localized)

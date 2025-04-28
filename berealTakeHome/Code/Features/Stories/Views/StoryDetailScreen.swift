@@ -9,11 +9,12 @@ import SwiftUI
 
 struct StoryDetailScreen: View {
 
-  @ObservedObject var viewModel: StoriesViewModel = StoriesViewModel()
+  @ObservedObject var viewModel: StoriesViewModel
   var story: StoryModel?
   @State private var isLiked: Bool
 
-  init(story: StoryModel?) {
+  init(viewModel: StoriesViewModel, story: StoryModel?) {
+    self.viewModel = viewModel
     self.story = story
     _isLiked = State(initialValue: story?.story.liked ?? false)
   }
@@ -42,7 +43,8 @@ struct StoryDetailScreen: View {
 }
 
 #Preview {
-  StoryDetailScreen(story: StoryModel(id: 1,
+  StoryDetailScreen(viewModel: StoriesViewModel(),
+                    story: StoryModel(id: 1,
                                       image: "avatar6",
                                       user: "user2",
                                       story: Story(id: 1,
