@@ -2,7 +2,7 @@
     "stories": [
       {
         "id": 1,
-        "image": "avatar1",
+        "image": "ava1",
         "story": {"id": 1, "story": "r1", "seen": true, "liked": false},
         "user": "user1",
         "createdAt": "2025-04-01T10:00:00Z",
@@ -10,7 +10,7 @@
       },
       {
         "id": 2,
-        "image": "avatar2",
+        "image": "ava2",
         "story": {"id": 1, "story": "r2", "seen": false, "liked": true},
         "user": "user2",
         "createdAt": "2025-04-02T11:30:00Z",
@@ -18,7 +18,7 @@
       },
       {
         "id": 3,
-        "image": "avatar3",
+        "image": "ava3",
         "story": {"id": 1, "story": "r3", "seen": false, "liked": true},
         "user": "user3",
         "createdAt": "2025-04-03T09:00:00Z",
@@ -26,7 +26,7 @@
       },
       {
         "id": 4,
-        "image": "avatar4",
+        "image": "ava4",
         "story": {"id": 1, "story": "r4", "seen": true, "liked": false},
         "user": "user4",
         "createdAt": "2025-04-04T08:45:00Z",
@@ -34,23 +34,23 @@
       },
       {
         "id": 5,
-        "image": "avatar5",
+        "image": "ava5",
         "story": {"id": 1, "story": "r5", "seen": true, "liked": false},
-        "user": "user1",
+        "user": "user5",
         "createdAt": "2025-04-01T10:00:00Z",
         "updatedAt": "2025-04-01T12:00:00Z"
       },
       {
         "id": 6,
-        "image": "avatar6",
+        "image": "ava6",
         "story": {"id": 1, "story": "r6", "seen": false, "liked": true},
-        "user": "user2",
+        "user": "user",
         "createdAt": "2025-04-02T11:30:00Z",
         "updatedAt": "2025-04-02T14:00:00Z"
       },
       {
         "id": 7,
-        "image": "avatar7",
+        "image": "ava1",
         "story": {"id": 1, "story": "r7", "seen": false, "liked": true},
         "user": "user3",
         "createdAt": "2025-04-03T09:00:00Z",
@@ -58,7 +58,7 @@
       },
       {
         "id": 8,
-        "image": "avatar8",
+        "image": "ava3",
         "story": {"id": 1, "story": "r8", "seen": true, "liked": false},
         "user": "user4",
         "createdAt": "2025-04-04T08:45:00Z",

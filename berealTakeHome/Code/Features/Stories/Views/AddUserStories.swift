@@ -32,9 +32,9 @@ struct AddUserStories: View {
 
               Image(systemName: "plus.circle.fill")
                 .resizable()
-                .frame(width: 30, height: 30, alignment: .bottomTrailing)
+                .frame(width: 20, height: 20, alignment: .bottomTrailing)
             }
-            .padding(.bottom, 50)
+            .padding(.bottom, 18)
           }
         }
 

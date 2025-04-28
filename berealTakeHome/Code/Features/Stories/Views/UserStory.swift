@@ -16,18 +16,19 @@ struct UserStory: View {
 
         Image(story?.image ?? "person.circle")
           .resizable()
+          .aspectRatio(contentMode: .fit)
+          .scaledToFit()
           .frame(width: 60, height: 60)
-          .padding(25)
           .clipShape(.circle)
           .overlay(Circle().stroke(
             story?.story.seen ?? false ? Color.green : Color.white,
             lineWidth: 5))
-          .shadow(radius: 10)
+          .shadow(radius: 2)
           .toolbar(.hidden, for: .tabBar)
       }
 
       Text(story?.user ?? "StoryScreen.addUserStory".localized)
-        .font(.title)
+        .font(.caption)
     }
   }
 }
@@ -41,7 +42,7 @@ struct UserStory: View {
   UserStory(
     story: .init(
             id: 1,
-            image: "avatar1",
+            image: "ava1",
             user: "Jane Doe",
             story: story,
             createdAt: "2025-04-01T10:00:00Z",
