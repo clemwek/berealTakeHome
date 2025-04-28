@@ -26,4 +26,15 @@ class StoriesViewModel: ObservableObject {
       self.error = error
     }
   }
+
+  func likeStory(_ story: StoryModel) {
+    StoriesAction(
+      path: "stories/\(story.id)/like",
+      method: .put
+    ).call { response in
+      print("Liked story: ", response)
+    } failure: { error in
+      print("ViewModel Error:", error)
+    }
+  }
 }

@@ -30,12 +30,15 @@ class APIRequest<Parameters: Encodable, Model: Decodable> {
     authorized: Bool,
     queryItems: [URLQueryItem]? = nil,
     parameters: Parameters? = nil,
-    mockData:   Data? = nil,
+    mockData: Data? = nil,
     completion: @escaping CompletionHandler,
     failure: @escaping FailureHandler
   ) {
-    
+
     if let mock = mockData {
+      if path.contains("like") {
+        
+      }
       DispatchQueue.main.async { completion(mock) }
       return
     }
