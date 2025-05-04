@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct HomeScreen: View {
+  @StateObject private var storiesViewModel = StoriesViewModel()
 
   var body: some View {
+
     NavigationView {
       VStack {
-        StoriesScreen()
+        StoriesScreen(viewModel: storiesViewModel)
         Spacer()
       }
       .navigationTitle("Bereal")

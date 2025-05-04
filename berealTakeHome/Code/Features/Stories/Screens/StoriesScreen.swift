@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StoriesScreen: View {
 
-  @ObservedObject var viewModel: StoriesViewModel = StoriesViewModel()
+  @StateObject var viewModel: StoriesViewModel
 
   var body: some View {
     StoryStrip(viewModel: viewModel)
@@ -23,5 +23,5 @@ struct StoriesScreen: View {
 }
 
 #Preview {
-  StoriesScreen()
+  StoriesScreen(viewModel: StoriesViewModel())
 }
