@@ -53,4 +53,3 @@ class Auth: ObservableObject {
     loggedIn = false
   }
 }
-

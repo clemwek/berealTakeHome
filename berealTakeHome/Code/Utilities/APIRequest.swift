@@ -42,9 +42,10 @@ class APIRequest<Parameters: Encodable, Model: Decodable> {
       DispatchQueue.main.async { completion(mock) }
       return
     }
-//    if !NetworkMonitor.shared.isReachable {
-//      return failure(.noInternet)
-//    }
+
+    if !NetworkMonitor.shared.isReachable {
+      return failure(.noInternet)
+    }
 
     var components = URLComponents()
     components.scheme = scheme
