@@ -11,7 +11,6 @@ struct StoriesAction {
 
   var path = "/stories"
   var method: HTTPMethod = .get
-  var queryItems: [URLQueryItem]?
 
   func call(
     completion: @escaping (StoriesResponse) -> Void,
@@ -21,7 +20,6 @@ struct StoriesAction {
       path: path,
       method: method,
       authorized: true,
-      queryItems: queryItems,
       mockData: try? StoriesFileManager.shared.load()
     ) { data in
 

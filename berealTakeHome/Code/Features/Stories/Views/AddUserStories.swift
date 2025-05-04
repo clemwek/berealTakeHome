@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddUserStories: View {
+
   let viewModel: StoriesViewModel
   var userStory = StoryModel(id: 1000,
                              image: "user",
@@ -20,6 +21,7 @@ struct AddUserStories: View {
                              updatedAt: "2025-04-01T10:00:00Z")
 
   var body: some View {
+
     HStack {
       UserStory(
         story: userStory,

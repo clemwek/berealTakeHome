@@ -16,7 +16,6 @@ class StoriesViewModel: ObservableObject {
 
   func fetchStories() {
     StoriesAction(
-      queryItems: [ pageItem ]
     ).call {response in
       self.error = nil
       self.stories = response.stories
